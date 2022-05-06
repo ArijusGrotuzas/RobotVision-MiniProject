@@ -165,10 +165,10 @@ def cleanup(objects, startswith="lego_brick"):
             
 def WaitPartCamera():
     #Use real image processing and brick detection
-    print("Saving camera snapshot to file:" + 'Image-Camera-Simulation.png')   
+    print("Saving camera snapshot to file:" + 'CapturedImage.png')   
     
     # Implement your image processing here:
-    return detect_bricks('Image-Camera-Simulation.png')
+    return detect_bricks('CapturedImage.png')
 
 
 #Robot stuff

@@ -118,7 +118,7 @@ def main():
     # Display the resulting frame
     cropped = cv.resize(cropped, (475, 308), interpolation = cv.INTER_AREA)
 	
-    cv.imwrite('Image-Camera-Simulation.png',cropped)
+    cv.imwrite('CapturedImage.png',cropped)
     time.sleep(.5)
 
 
