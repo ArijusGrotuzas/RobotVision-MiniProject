@@ -3,6 +3,7 @@
 import numpy as np
 import cv2 as cv
 import glob
+import time
 
 
 def projectionError(objectPoints, imagePoints, rvecs, tvecs, cameraMatrix, coefficients):
@@ -107,20 +108,18 @@ def getCalibration(size, directory='data/', display=False):
 
 def main():
     # Initialize parameters
-    size = (6, 9)
-    img = cv.imread('data/cam (1).jpg', cv.IMREAD_GRAYSCALE)
-
-    # Get the intrinsic parameters and distortion coefficients of the camera and print them
-    cameraMatrix, newCameraMatrix, coefficients = getCalibration(size, directory='data/')
-    print(f'Intrinsic parameter matrix: \n{newCameraMatrix}, \ndistortion coefficients: {coefficients}')
-
-    # Remove distortion
-    output = cv.undistort(img, cameraMatrix, coefficients, newCameraMatrix=newCameraMatrix)
-
-    # Show corrected image
-    cv.imshow('img', cv.resize(output, (800, 500)))
-    cv.waitKey(0)
-    cv.destroyAllWindows()
+    vid = cv.VideoCapture(0)
+    ret, frame = vid.read()
+    roi = cv.selectROI('',frame)
+    # Capture the video frame
+    # by frame
+    ret, frame = vid.read()
+    cropped = frame[int(roi[1]):int(roi[1])+int(roi[3]),int(roi[0]):int(roi[0])+int(roi[2])]
+    # Display the resulting frame
+    cropped = cv.resize(cropped, (475, 308), interpolation = cv.INTER_AREA)
+	
+    cv.imwrite('Image-Camera-Simulation.png',cropped)
+    time.sleep(.5)
 
 
 if __name__ == '__main__':
