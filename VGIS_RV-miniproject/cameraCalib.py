@@ -110,15 +110,18 @@ def main():
     # Initialize parameters
     vid = cv.VideoCapture(0)
     ret, frame = vid.read()
+    cameraMatrix, newCameraMatrix, distCoeffs = getCalibration((6,9))
+    #dst = cv.undistort(frame, newCameraMatrix, distCoeffs)
     roi = cv.selectROI('',frame)
     # Capture the video frame
     # by frame
-    ret, frame = vid.read()
+    #ret, frame = vid.read()
     cropped = frame[int(roi[1]):int(roi[1])+int(roi[3]),int(roi[0]):int(roi[0])+int(roi[2])]
     # Display the resulting frame
     cropped = cv.resize(cropped, (475, 308), interpolation = cv.INTER_AREA)
 	
     cv.imwrite('CapturedImage.png',cropped)
+    print(cropped.shape)
     time.sleep(.5)
 
 
