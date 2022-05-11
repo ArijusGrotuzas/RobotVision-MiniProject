@@ -19,7 +19,8 @@
 
 
 ## Colorspace conversion and threshold
-![4_colorspace_conv_and_thresh](https://user-images.githubusercontent.com/45823340/167778610-6a431668-0c6b-4140-aae1-d38851fea0dd.png)
+![4_colorspace_conv_and_thresh](https://user-images.githubusercontent.com/45823340/167808436-e0196516-f57b-4539-9e85-fb2edea0573a.png)
+
 
 ## End result
 ![5_detected](https://user-images.githubusercontent.com/45823340/167778628-fb9892af-eb2b-4fb8-a622-84df85d01100.png)
