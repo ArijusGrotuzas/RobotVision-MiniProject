@@ -6,16 +6,20 @@
 4. uncomment line 12 in create_figures.py within the robodk environment and change line 235 to robot ip
 # Image processing steps
 ## Initial image
-![CapturedImage](https://user-images.githubusercontent.com/45823340/167216900-2001b537-c065-479f-833e-33ac121feb0d.png)
+![CapturedImage](https://user-images.githubusercontent.com/45823340/167778541-cf4b2391-7d58-4c3b-b12b-fb68d525dc25.png)
 
 ## Gamma mapping
-![1_gamma_mapped](https://user-images.githubusercontent.com/45823340/167216780-e72c5aa8-2aa7-4d2b-8e79-276e9672c862.png)
+![1_gamma_mapped](https://user-images.githubusercontent.com/45823340/167778552-028b8fa1-a244-41db-a1d5-2d6cca51fded.png)
 
 ## blurring
-![2_blurred](https://user-images.githubusercontent.com/45823340/167216923-94c5bb96-5207-4631-b868-3166dbac0832.png)
+![2_blurred](https://user-images.githubusercontent.com/45823340/167778575-ea3217f4-5082-4e28-b461-bcdd970d74ae.png)
+
+## K-means clustering
+![3_kmean](https://user-images.githubusercontent.com/45823340/167778596-42892e0c-b97c-43b8-91a1-18b65c7ee19d.png)
+
 
 ## Colorspace conversion and threshold
-![3_colorspace_conv_and_thresh](https://user-images.githubusercontent.com/45823340/167216957-6023494a-b2ab-4bf1-af56-7bc97ad88ca7.png)
+![4_colorspace_conv_and_thresh](https://user-images.githubusercontent.com/45823340/167778610-6a431668-0c6b-4140-aae1-d38851fea0dd.png)
 
 ## End result
-![4_detected](https://user-images.githubusercontent.com/45823340/167217013-7b75e4e8-7b0a-4a14-a7e5-9641a3726b15.png)
+![5_detected](https://user-images.githubusercontent.com/45823340/167778628-fb9892af-eb2b-4fb8-a622-84df85d01100.png)
